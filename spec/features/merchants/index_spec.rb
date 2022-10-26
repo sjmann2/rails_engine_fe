@@ -9,7 +9,7 @@ require 'rails_helper'
 RSpec.describe 'the merchant index page' do
   describe 'When I visit /merchants I see a list of merchants by name' do
     describe 'When I click the merchants name it directs me to that merchants show page' do
-      it 'displays all merchants as a link to their show page' do
+      it 'displays all merchants as a link to their show page', :vcr do
         merchants = MerchantsFacade.get_merchants
         merchant_1 = MerchantsFacade.get_merchant(merchants.first.id)
         items = MerchantsFacade.get_merchant_items(merchants.first.id)
@@ -21,12 +21,12 @@ RSpec.describe 'the merchant index page' do
         end
 
         click_link("#{merchants.first.name}")
-
         expect(current_path).to eq(merchant_path(merchant_1.id))
 
-        expect(page).to have_content("#{items.first.name}")
+        items.each do |item|
+          expect(page).to have_content("#{item.name}")
+        end
       end
     end
   end
 end
-# need to add VCR and webmock and tests for facades, poros, service

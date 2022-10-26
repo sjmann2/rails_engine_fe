@@ -43,6 +43,7 @@ end
 group :test do
   gem 'webmock'
   gem 'vcr'
+  gem 'launchy'
 end
 
 group :development, :test do
