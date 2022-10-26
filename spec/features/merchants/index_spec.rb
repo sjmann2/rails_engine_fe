@@ -11,6 +11,8 @@ RSpec.describe 'the merchant index page' do
     describe 'When I click the merchants name it directs me to that merchants show page' do
       it 'displays all merchants as a link to their show page' do
         merchants = MerchantsFacade.get_merchants
+        merchant_1 = MerchantsFacade.get_merchant(merchants.first.id)
+        items = MerchantsFacade.get_merchant_items(merchants.first.id)
 
         visit merchants_path
 
@@ -20,9 +22,9 @@ RSpec.describe 'the merchant index page' do
 
         click_link("#{merchants.first.name}")
 
-        expect(current_path).to eq(merchant_path(merchants.first))
+        expect(current_path).to eq(merchant_path(merchant_1.id))
 
-        # expect(page).to have_content("#{item_1.name}")
+        expect(page).to have_content("#{items.first.name}")
       end
     end
   end
