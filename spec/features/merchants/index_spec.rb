@@ -29,3 +29,4 @@ RSpec.describe 'the merchant index page' do
     end
   end
 end
+# need to add VCR and webmock and tests for facades, poros, service
