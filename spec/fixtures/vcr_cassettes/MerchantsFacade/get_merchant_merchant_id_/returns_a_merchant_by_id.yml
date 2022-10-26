@@ -1,0 +1,73 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/merchants/55
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.6.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"1f633840eb73ec83c9a38b845bf5c724"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - a879a2a6-c8fc-4ac9-a5da-f5a95bf7731c
+      X-Runtime:
+      - '0.025522'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"55","type":"merchant","attributes":{"name":"Koch, Wolf
+        and Jerde"}}}'
+  recorded_at: Wed, 26 Oct 2022 21:46:02 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/merchants/55
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.6.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"1f633840eb73ec83c9a38b845bf5c724"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 1061c160-06ff-4d4f-b85f-f9bb5f6c2c28
+      X-Runtime:
+      - '0.002838'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"55","type":"merchant","attributes":{"name":"Koch, Wolf
+        and Jerde"}}}'
+  recorded_at: Wed, 26 Oct 2022 21:46:07 GMT
+recorded_with: VCR 6.1.0

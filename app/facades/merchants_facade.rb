@@ -7,6 +7,7 @@ class MerchantsFacade
   end
   
   def self.get_merchant(merchant_id)
+
     merchant_data = MerchantsService.get_merchant(merchant_id)
     Merchant.new(merchant_data[:data])
   end
