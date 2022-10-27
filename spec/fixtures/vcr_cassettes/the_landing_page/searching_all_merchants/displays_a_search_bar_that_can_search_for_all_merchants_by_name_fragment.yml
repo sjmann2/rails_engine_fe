@@ -1,0 +1,85 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/merchants/find_all?name=sch
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.6.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"94afbf193b95d40d187f14590f4e324f"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - b46ae017-8ae0-4485-8b9c-38f042daac21
+      X-Runtime:
+      - '0.071841'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"1","type":"merchant","attributes":{"name":"Schroeder-Jerde"}},{"id":"20","type":"merchant","attributes":{"name":"Schulist,
+        Wilkinson and Leannon"}},{"id":"21","type":"merchant","attributes":{"name":"Leffler,
+        Rice and Leuschke"}},{"id":"26","type":"merchant","attributes":{"name":"Balistreri,
+        Schaefer and Kshlerin"}},{"id":"28","type":"merchant","attributes":{"name":"Schiller,
+        Barrows and Parker"}},{"id":"35","type":"merchant","attributes":{"name":"Schuster
+        Group"}},{"id":"39","type":"merchant","attributes":{"name":"Schuppe, Friesen
+        and Schmeler"}},{"id":"70","type":"merchant","attributes":{"name":"Weimann-Schimmel"}},{"id":"71","type":"merchant","attributes":{"name":"Schulist
+        Group"}},{"id":"93","type":"merchant","attributes":{"name":"Walter-Schowalter"}}]}'
+  recorded_at: Thu, 27 Oct 2022 15:52:37 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/merchants/find_all?name=sch
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.6.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"94afbf193b95d40d187f14590f4e324f"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - de9df7f4-02de-4a53-a412-7f931fe590b8
+      X-Runtime:
+      - '0.009494'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"1","type":"merchant","attributes":{"name":"Schroeder-Jerde"}},{"id":"20","type":"merchant","attributes":{"name":"Schulist,
+        Wilkinson and Leannon"}},{"id":"21","type":"merchant","attributes":{"name":"Leffler,
+        Rice and Leuschke"}},{"id":"26","type":"merchant","attributes":{"name":"Balistreri,
+        Schaefer and Kshlerin"}},{"id":"28","type":"merchant","attributes":{"name":"Schiller,
+        Barrows and Parker"}},{"id":"35","type":"merchant","attributes":{"name":"Schuster
+        Group"}},{"id":"39","type":"merchant","attributes":{"name":"Schuppe, Friesen
+        and Schmeler"}},{"id":"70","type":"merchant","attributes":{"name":"Weimann-Schimmel"}},{"id":"71","type":"merchant","attributes":{"name":"Schulist
+        Group"}},{"id":"93","type":"merchant","attributes":{"name":"Walter-Schowalter"}}]}'
+  recorded_at: Thu, 27 Oct 2022 15:52:37 GMT
+recorded_with: VCR 6.1.0

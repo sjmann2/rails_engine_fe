@@ -18,4 +18,11 @@ class MerchantsFacade
       Item.new(data)
     end
   end
+
+  def self.search_all_merchants(search_params)
+    merchants_data = MerchantsService.search_all_merchants(search_params)
+    merchants_data[:data].map do |data|
+      Merchant.new(data)
+    end
+  end
 end
